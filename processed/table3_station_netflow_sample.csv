@@ -1,0 +1,13 @@
+day_type,station_id,station_name,lat,lng,avg_daily_arrivals,avg_daily_departures,avg_daily_net_inflow,net_inflow_abs,flow_direction
+Weekday,5730.08,Greenwich St & W Houston St,40.728846,-74.008591,338.05,311.86,26.19,26.19,Net inflow
+Weekday,6450.05,8 Ave & W 31 St,40.750585,-73.994685,467.48,454.43,13.05,13.05,Net inflow
+Weekday,7286.02,E 93 St & 2 Ave,40.782454,-73.94892,107.1,96.29,10.81,10.81,Net inflow
+Weekday,6389.09,E 39 St & Lexington Ave,40.749499,-73.977292,273.57,301.19,-27.62,27.62,Net outflow
+Weekday,6280.13,E 33 St & Park Ave,40.746525,-73.982143,140.0,161.9,-21.9,21.9,Net outflow
+Weekday,4611.03,Willoughby Ave & Hall St,40.69196,-73.965369,183.33,203.52,-20.19,20.19,Net outflow
+Weekend,6492.04,W 33 St & 10 Ave,40.753773,-73.999376,97.38,71.88,25.5,25.5,Net inflow
+Weekend,4013.08,Columbia St & Lorraine St,40.674706,-74.007557,28.75,14.75,14.0,14.0,Net inflow
+Weekend,6822.09,1 Ave & E 68 St,40.765005,-73.958185,190.75,177.25,13.5,13.5,Net inflow
+Weekend,6230.04,FDR Drive & E 35 St,40.744219,-73.971212,168.12,191.62,-23.5,23.5,Net outflow
+Weekend,6450.05,8 Ave & W 31 St,40.750585,-73.994685,206.75,227.25,-20.5,20.5,Net outflow
+Weekend,6345.08,E 39 St & 2 Ave,40.748033,-73.973828,119.25,138.88,-19.62,19.62,Net outflow

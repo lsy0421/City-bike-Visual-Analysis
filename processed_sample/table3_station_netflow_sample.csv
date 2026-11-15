@@ -1,0 +1,13 @@
+day_type,station_id,station_name,lat,lng,avg_daily_arrivals,avg_daily_departures,avg_daily_net_inflow,net_inflow_abs,flow_direction
+Weekday,6450.05,8 Ave & W 31 St,40.750585,-73.994685,461.0,166.0,295.0,295.0,Net inflow
+Weekday,6602.03,W 41 St & 8 Ave,40.756405,-73.990026,466.33,185.22,281.11,281.11,Net inflow
+Weekday,6072.06,Greenwich Ave & 8 Ave,40.739017,-74.002638,438.89,179.56,259.33,259.33,Net inflow
+Weekday,5980.10,E 17 St & Broadway,40.737006,-73.990134,0.0,271.33,-271.33,271.33,Net outflow
+Weekday,6331.01,W 31 St & 7 Ave,40.749156,-73.9916,0.0,242.89,-242.89,242.89,Net outflow
+Weekday,6233.04,Pier 61 at Chelsea Piers,40.746872,-74.00821,7.56,231.0,-223.44,223.44,Net outflow
+Weekend,5763.03,Carmine St & 6 Ave,40.730386,-74.00215,463.5,193.75,269.75,269.75,Net inflow
+Weekend,5379.10,N 6 St & Bedford Ave,40.717452,-73.958509,347.0,117.75,229.25,229.25,Net inflow
+Weekend,6072.06,Greenwich Ave & 8 Ave,40.739017,-74.002638,396.0,172.75,223.25,223.25,Net inflow
+Weekend,6233.04,Pier 61 at Chelsea Piers,40.746872,-74.00821,9.25,231.75,-222.5,222.5,Net outflow
+Weekend,5880.02,W 4 St & 7 Ave S,40.734011,-74.002939,9.5,229.0,-219.5,219.5,Net outflow
+Weekend,5980.10,E 17 St & Broadway,40.737006,-73.990134,0.0,201.5,-201.5,201.5,Net outflow

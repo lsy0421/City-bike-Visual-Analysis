@@ -1,0 +1,8 @@
+step,rows
+Raw rows loaded,1000000
+Removed: duplicate ride_id,0
+Removed: start date outside Sept 2026,220
+Removed: Labor Day (Sept 7),65748
+Removed: missing station/coordinates,2487
+Removed: duration < 1 or > 180 min,641
+Trips kept for analysis,930904

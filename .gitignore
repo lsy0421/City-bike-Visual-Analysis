@@ -1,0 +1,18 @@
+# Raw Citi Bike trip data (~1 GB, exceeds GitHub limits) — download from https://citibikenyc.com/system-data
+*.zip
+202609-citibike-tripdata/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+~$*

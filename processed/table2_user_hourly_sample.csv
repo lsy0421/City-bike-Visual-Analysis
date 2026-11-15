@@ -1,0 +1,13 @@
+day_type,user_type,hour,departures,group_total,hour_share
+Weekday,Member,8,261731,3161064,0.0828
+Weekday,Member,14,159707,3161064,0.0505
+Weekday,Member,17,330493,3161064,0.1046
+Weekday,Casual,8,28562,620741,0.046
+Weekday,Casual,14,38585,620741,0.0622
+Weekday,Casual,17,60208,620741,0.097
+Weekend,Member,8,18325,759436,0.0241
+Weekend,Member,14,56901,759436,0.0749
+Weekend,Member,17,57574,759436,0.0758
+Weekend,Casual,8,4245,262299,0.0162
+Weekend,Casual,14,21174,262299,0.0807
+Weekend,Casual,17,21118,262299,0.0805

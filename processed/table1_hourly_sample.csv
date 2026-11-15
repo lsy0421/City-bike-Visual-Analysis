@@ -1,0 +1,13 @@
+day_type,hour,total_departures,n_days,avg_daily_departures
+Weekday,0,38565,21,1836.4
+Weekday,5,30748,21,1464.2
+Weekday,8,290293,21,13823.5
+Weekday,12,164359,21,7826.6
+Weekday,17,390701,21,18604.8
+Weekday,22,115200,21,5485.7
+Weekend,0,31284,8,3910.5
+Weekend,5,4310,8,538.8
+Weekend,8,22570,8,2821.2
+Weekend,12,69988,8,8748.5
+Weekend,17,78692,8,9836.5
+Weekend,22,33551,8,4193.9
