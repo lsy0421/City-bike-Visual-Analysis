@@ -5,6 +5,10 @@ A Visual Analysis of Weekday–Weekend Hotspots and Flows in NYC Bike Share
 
 Use the [September 2026 Manhattan data and processing instructions](manhattan-data/README.md) for Q1–Q4. Every included trip starts and ends within the Manhattan borough boundary. The earlier NYC-wide tables remain available in [processed/](processed/).
 
+## Milestone 3 first draft
+
+The [Q1 and Q3 notebook](milestone3/team17-q1-q3.ipynb) includes the two interactive D3 views and their findings. See [how to run the notebook](milestone3/README.md).
+
 ## Group Details
 
 - **Team name:** 13528
