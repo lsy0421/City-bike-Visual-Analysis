@@ -1,0 +1,13 @@
+day_type,station_id,hour,trip_count,avg_departures_per_day
+weekday,4374.01,0,0,0.0000
+weekday,4374.01,1,0,0.0000
+weekday,4374.01,2,0,0.0000
+weekday,4374.01,3,0,0.0000
+weekday,4374.01,4,0,0.0000
+weekday,4374.01,5,0,0.0000
+weekend,4374.01,0,0,0.0000
+weekend,4374.01,1,0,0.0000
+weekend,4374.01,2,0,0.0000
+weekend,4374.01,3,0,0.0000
+weekend,4374.01,4,0,0.0000
+weekend,4374.01,5,0,0.0000

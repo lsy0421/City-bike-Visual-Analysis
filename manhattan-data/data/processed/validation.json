@@ -1,0 +1,11 @@
+{
+  "all_5_monthly_csvs_read": true,
+  "q1_48_rows": true,
+  "q2_96_rows": true,
+  "q2_shares_sum_to_one": true,
+  "q1_counts_match_station_departures": true,
+  "all_30_dates_have_eligible_rides": true,
+  "q4_windows_disjoint": true,
+  "netflow_definition": true,
+  "sequential_exclusions_reconcile": true
+}

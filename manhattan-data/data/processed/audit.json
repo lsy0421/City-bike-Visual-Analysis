@@ -1,0 +1,55 @@
+{
+  "counts": {
+    "raw_rows": 4982855,
+    "missing_ride_id": 0,
+    "duplicate_ride_id": 0,
+    "invalid_time": 0,
+    "departure_outside_month": 549,
+    "missing_station_id": 17115,
+    "invalid_or_missing_coordinates": 0,
+    "not_both_endpoints_in_manhattan": 2124601,
+    "eligible_trips": 2840590,
+    "holiday_departures": 84135,
+    "unknown_membership": 0,
+    "end_outside_month": 0,
+    "q1_departures": 2756455,
+    "q2_known_membership_departures": 2756455,
+    "q3_arrivals": 2756219,
+    "station_count": 712
+  },
+  "files": [
+    {
+      "file": "202609-citibike-tripdata_1.csv",
+      "rows": 1000000
+    },
+    {
+      "file": "202609-citibike-tripdata_2.csv",
+      "rows": 1000000
+    },
+    {
+      "file": "202609-citibike-tripdata_3.csv",
+      "rows": 1000000
+    },
+    {
+      "file": "202609-citibike-tripdata_4.csv",
+      "rows": 1000000
+    },
+    {
+      "file": "202609-citibike-tripdata_5.csv",
+      "rows": 982855
+    }
+  ],
+  "denominator_days": {
+    "weekday": 21,
+    "weekend": 8
+  },
+  "rules": {
+    "scope": "Both endpoints intersect official Manhattan borough boundary",
+    "timezone": "Timestamps interpreted as NYC local wall time, without conversion from UTC",
+    "holiday": "2026-09-07 excluded from ordinary-weekday comparisons",
+    "membership": "Unknown categories retained for total/space views, excluded only from Q2",
+    "arrivals": "End-time date determines arrival day type; only September-start cohort available; incoming August trips are not present",
+    "coordinates": "Station locations are endpoint-frequency-weighted means of eligible endpoint coordinates",
+    "duration": "Positive duration required; no arbitrary upper-duration filter"
+  }
+}

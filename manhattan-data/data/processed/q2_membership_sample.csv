@@ -1,0 +1,13 @@
+day_type,member_casual,hour,trip_count,denominator_days,group_total,hourly_share,avg_departures_per_day
+weekday,member,8,163338,21,1859946,0.0878,7778.0000
+weekday,member,12,81180,21,1859946,0.0436,3865.7143
+weekday,member,17,203686,21,1859946,0.1095,9699.3333
+weekday,casual,8,16108,21,352587,0.0457,767.0476
+weekday,casual,12,19257,21,352587,0.0546,917.0000
+weekday,casual,17,35899,21,352587,0.1018,1709.4762
+weekend,member,8,9872,8,396866,0.0249,1234.0000
+weekend,member,12,28289,8,396866,0.0713,3536.1250
+weekend,member,17,30337,8,396866,0.0764,3792.1250
+weekend,casual,8,2271,8,147056,0.0154,283.8750
+weekend,casual,12,10248,8,147056,0.0697,1281.0000
+weekend,casual,17,12187,8,147056,0.0829,1523.3750

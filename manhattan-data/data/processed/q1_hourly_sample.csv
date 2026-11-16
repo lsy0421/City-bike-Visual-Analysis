@@ -1,0 +1,13 @@
+day_type,hour,trip_count,denominator_days,avg_departures_per_day
+weekday,0,18099,21,861.8571
+weekday,7,112280,21,5346.6667
+weekday,8,179446,21,8545.0476
+weekday,12,100437,21,4782.7143
+weekday,17,239585,21,11408.8095
+weekday,23,40347,21,1921.2857
+weekend,0,15804,8,1975.5000
+weekend,7,7225,8,903.1250
+weekend,8,12143,8,1517.8750
+weekend,12,38537,8,4817.1250
+weekend,17,42524,8,5315.5000
+weekend,23,13931,8,1741.3750

@@ -1,0 +1,13 @@
+day_type,period,station_id,trip_count,denominator_days,avg_departures_per_day,station_name,lat,lon,coordinate_observations
+weekday,Evening (16–19),6492.08,5132,21,244.3810,9 Ave & W 33 St,40.7526,-73.9968,29206
+weekday,Evening (16–19),6140.05,4200,21,200.0000,W 21 St & 6 Ave,40.7417,-73.9942,33577
+weekday,Morning (07–10),6432.09,3030,21,144.2857,Park Ave & E 42 St,40.7519,-73.9777,27983
+weekend,Evening (16–19),6233.04,1029,8,128.6250,Pier 61 at Chelsea Piers,40.7469,-74.0082,32752
+weekday,Morning (07–10),6233.04,2440,21,116.1905,Pier 61 at Chelsea Piers,40.7469,-74.0082,32752
+weekend,Evening (16–19),6876.04,912,8,114.0000,Central Park S & 6 Ave,40.7659,-73.9763,25667
+weekend,Midday (11–14),6233.04,910,8,113.7500,Pier 61 at Chelsea Piers,40.7469,-74.0082,32752
+weekend,Midday (11–14),6876.04,861,8,107.6250,Central Park S & 6 Ave,40.7659,-73.9763,25667
+weekday,Midday (11–14),6140.05,2040,21,97.1429,W 21 St & 6 Ave,40.7417,-73.9942,33577
+weekday,Midday (11–14),6948.10,2009,21,95.6667,Broadway & W 58 St,40.7670,-73.9817,28631
+weekend,Morning (07–10),6726.01,252,8,31.5000,11 Ave & W 41 St,40.7603,-73.9988,23964
+weekend,Morning (07–10),6876.04,245,8,30.6250,Central Park S & 6 Ave,40.7659,-73.9763,25667
