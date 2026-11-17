@@ -46,6 +46,14 @@ button { cursor: pointer; }
 .map-symbol { font-size: 1.15em; padding-right: 2px; }
 #magnitude { display: inline-flex; align-items: center; gap: .3rem; }
 #magnitude svg { width: 104px; }
+.legend .key { display: inline-flex; align-items: center; gap: .5rem; }
+.panel-title { fill: #172e39; font-size: 13px; font-weight: 650; }
+.hotspots { display: grid; grid-template-columns: 1.4rem repeat(3, minmax(0, 1fr)); gap: 6px; align-items: center; max-width: 860px; }
+.hotspots .column-label { text-align: center; font-weight: 650; line-height: 1.25; }
+.hotspots .row-label { align-self: stretch; display: flex; align-items: center; justify-content: center; }
+.hotspots .row-label span { writing-mode: vertical-rl; transform: rotate(180deg); font-weight: 650; white-space: nowrap; }
+.hotspots .map-panel figcaption { font-weight: 400; color: var(--muted); font-size: .85rem; margin: .1rem 0 .25rem; }
+#magnitude svg { height: 30px; }
 @media (max-width: 380px) {
   body { padding-inline: 6px; }
   .details th, .details td { padding-inline: .2rem; font-size: .87rem; }

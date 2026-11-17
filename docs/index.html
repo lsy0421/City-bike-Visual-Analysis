@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Citi Bike Weekday Weekend</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="index.html">Citi Bike: Weekday vs Weekend in Manhattan</a>
+  <nav class="q"><a href="index.html" aria-current="page">Overview</a><a href="q1.html">Q1 Hourly departures</a><a href="q2.html">Q2 Rider groups</a><a href="q3.html">Q3 Net flow</a><a href="q4.html">Q4 Hotspots</a></nav>
+</header>
+<main>
+  <h1>A Visual Analysis of Weekday–Weekend Hotspots and Flows in NYC Bike Share</h1>
+  <p class="note">Team 17 · Xi Qiao (xq816), Shiyu Liu (sl13528) · All visualizations are built with D3 v7.</p>
+
+  <h2>Research question</h2>
+  <p>How does Citi Bike use in New York City differ between weekdays and weekends: where rides are concentrated (hotspots), and how bikes move between stations (flows)?</p>
+  <p>Our working hypothesis is that weekday riding is mostly commuting, with sharp peaks, predictable directions and more activity around business districts, while weekend riding is more leisure-oriented, spread through the day, centered on parks and waterfronts, and has a larger share of casual riders. The answer matters for operations: if demand moves to different places on weekends, bike rebalancing and station planning need to take the day of the week into account.</p>
+
+  <h2>Scope</h2>
+  <div class="stats" id="stats"></div>
+  <ul>
+    <li>Trips that started between 1 and 30 September 2026 (<a href="https://citibikenyc.com/system-data">Citi Bike System Data</a>).</li>
+    <li>Only trips that start <b>and</b> end at stations inside the Manhattan borough boundary (<a href="https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne">NYC Open Data</a>).</li>
+    <li>Labor Day (7 Sept) is excluded, which leaves 21 ordinary weekdays and 8 weekend days. Averages are per day of each type.</li>
+    <li>Trips need a unique ride ID, a positive duration and valid station IDs and coordinates at both ends. Station IDs that differ only by a trailing zero (same name, within 2 m) are combined for the maps.</li>
+    <li>Data and processing: <a href="https://github.com/lsy0421/City-bike-Visual-Analysis/tree/main/manhattan-data"><code>manhattan-data/</code></a>. The same views, with code and findings, are in the Milestone 3 notebook <code>milestone3/team17-q1-q4.ipynb</code>.</li>
+  </ul>
+  <details><summary>Exclusion audit</summary><div id="log"></div></details>
+
+  <h2>Questions</h2>
+  <div class="cards">
+    <a href="q1.html"><b>Q1 Hourly departures</b><span>How do average hourly departures differ between ordinary weekdays and weekends?</span></a>
+    <a href="q2.html"><b>Q2 Rider-group timing</b><span>How do member and casual departure-time distributions differ, and how does each change between weekdays and weekends?</span></a>
+    <a href="q3.html"><b>Q3 Station net flow</b><span>Which stations have net inflow or outflow, and how does the pattern differ between weekdays and weekends?</span></a>
+    <a href="q4.html"><b>Q4 Departure hotspots</b><span>How do departure hotspots change across morning, midday and evening, on weekdays and weekends?</span></a>
+  </div>
+  <p class="note">Each page states the question, shows the D3 visualization and the code that draws it, and describes what the visualization shows.</p>
+</main>
+<footer class="site">Source code: <a href="https://github.com/lsy0421/City-bike-Visual-Analysis">github.com/lsy0421/City-bike-Visual-Analysis</a></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+  // audit.json comes from manhattan-data (the team's processing pipeline).
+  d3.json("data/audit.json").then(audit => {
+    const c = audit.counts;
+    const log = Object.entries(c).map(([step, rows]) => ({ step: step.replaceAll("_", " "), rows }));
+    CB.dataTable("#log", log, [{ key: "step", label: "Count" }, { key: "rows", label: "Rows", format: CB.fmtInt }]);
+    d3.select("#stats").html(
+      `<div><b>${CB.fmtInt(c.raw_rows)}</b>raw trips, Sept 2026</div>` +
+      `<div><b>${CB.fmtInt(c.q1_departures)}</b>Manhattan trips analysed</div>` +
+      `<div><b>${audit.denominator_days.weekday} / ${audit.denominator_days.weekend}</b>weekdays / weekend days</div>`);
+  });
+</script>
+</body>
+</html>

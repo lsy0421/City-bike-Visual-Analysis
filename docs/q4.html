@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q4 Departure Hotspots</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="index.html">Citi Bike: Weekday vs Weekend in Manhattan</a>
+  <nav class="q"><a href="index.html">Overview</a><a href="q1.html">Q1 Hourly departures</a><a href="q2.html">Q2 Rider groups</a><a href="q3.html">Q3 Net flow</a><a href="q4.html" aria-current="page">Q4 Hotspots</a></nav>
+</header>
+<main>
+  <p class="eyebrow">Question 4</p>
+  <h1>Departure hotspots across the day</h1>
+
+  <h2>Question of interest</h2>
+  <p class="question">How do departure hotspots change across morning, midday, and evening, and how do the patterns differ between ordinary weekdays and weekends?</p>
+  <p class="note">Three-hour windows: morning [07:00, 10:00), midday [11:00, 14:00), evening [16:00, 19:00). Circle area shows the station's average departures per day within the window (divided by 21 or 8 days). All six maps share the same extent and symbol scale.</p>
+
+  <h2>D3 visualization</h2>
+  <p class="note">Hover a station to see its name and daily average. The same station is outlined on all six maps.</p>
+  <div id="q4-chart"></div>
+
+  <h3>Code (<code>js/q4.js</code>)</h3>
+  <pre class="code" id="q4-code"></pre>
+  <details><summary>Show shared helpers (js/common.js)</summary><pre class="code" id="common-code"></pre></details>
+
+  <h2>What the visualization shows</h2>
+  <p><b>Weekday morning</b> (about 20,100 departures per day in the window): the biggest circles are at <b>transit hubs and job centers</b>. Park Ave &amp; E 42 St, next to Grand Central, is the busiest at 144.3 per day, followed by Pier 61 at Chelsea Piers (116.2), W 31 St &amp; 7 Ave near Penn Station (109.9), W 21 St &amp; 6 Ave and 9 Ave &amp; W 33 St (about 106 each). These are rides away from rail terminals for the last part of a commute.</p>
+  <p><b>Weekday evening</b> is the busiest panel (about 29,450 per day), and the same Midtown/Chelsea hubs grow larger: 9 Ave &amp; W 33 St near Penn Station / Hudson Yards reaches 244 per day, W 21 St &amp; 6 Ave 200, Park Ave &amp; E 42 St 187. <b>Weekday midday</b> is much quieter (about 14,000) and spread out, with Central Park South and Columbus Circle (Broadway &amp; W 58 St) appearing among the top stations.</p>
+  <p><b>Weekend morning</b> is nearly empty (about 4,830 per day, a quarter of the weekday level), with no station above 32 per day. On <b>weekend midday and evening</b> (about 13,900 and 15,570 per day) the hotspots are <b>park and waterfront</b> stations: Pier 61 at Chelsea Piers on the Hudson River Greenway (114–129), Central Park S &amp; 6 Ave (107–114), Central Park W &amp; W 72 St and 10 Ave &amp; W 14 St by the High Line. Weekend midday has about the same volume as weekday midday, but it is centered on the parks and the Hudson waterfront rather than Midtown streets.</p>
+  <p class="note"><b>Reading the view.</b> This view shows where departures are concentrated. Q3 separately shows the balance between arrivals and departures. Each window is three hours long, so circle sizes can be compared across panels.</p>
+</main>
+<footer class="site">Data: Citi Bike System Data, September 2026 · Borough boundary: NYC Open Data · Team 17 (Xi Qiao, Shiyu Liu)</footer>
+<script src="js/common.js"></script>
+<script src="js/q4.js"></script>
+<script>CB.showCode("#q4-code", "js/q4.js"); CB.showCode("#common-code", "js/common.js");</script>
+</body>
+</html>

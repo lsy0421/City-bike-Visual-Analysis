@@ -8,11 +8,12 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
-from IPython.display import HTML
+from IPython.display import HTML, Markdown
 
 HERE = Path(__file__).resolve().parent
 DATA = HERE.parent / "manhattan-data" / "data"
 DAYS = {"weekday": 21, "weekend": 8}
+PERIODS = ["Morning (07–10)", "Midday (11–14)", "Evening (16–19)"]
 
 
 def read_table(name):
@@ -71,6 +72,49 @@ def station_net_flow():
             }
         )
     return result, aliases
+
+
+def membership_shares():
+    """Q2: hourly departures for each rider group and day type, with the group total."""
+    return [
+        {
+            "day": row["day_type"],
+            "group": row["member_casual"],
+            "hour": int(row["hour"]),
+            "count": int(row["trip_count"]),
+            "total": int(row["group_total"]),
+        }
+        for row in read_table("q2_membership.csv")
+    ]
+
+
+def window_hotspots():
+    """Q4: departures per station, day type and three-hour window, with the Q3 ID reconciliation."""
+    stations = {row["station_id"]: row for row in read_table("stations.csv")}
+    aliases = station_aliases(stations)
+    counts = defaultdict(int)
+    for row in read_table("q4_hotspots.csv"):
+        station_id = aliases.get(row["station_id"], row["station_id"])
+        counts[station_id, row["day_type"], row["period"]] += int(row["trip_count"])
+
+    result = []
+    for station_id in sorted(stations.keys() - aliases.keys()):
+        row = stations[station_id]
+        result.append(
+            {
+                "id": station_id,
+                "name": row["station_name"],
+                "coordinate": [float(row["lon"]), float(row["lat"])],
+                "counts": {day: {period: counts[station_id, day, period] for period in PERIODS} for day in DAYS},
+            }
+        )
+    return result
+
+
+def show_code(name):
+    """Display the D3 source of one view, so the notebook shows each chart's code."""
+    source = (HERE / f"{name}.js").read_text(encoding="utf-8")
+    return Markdown(f"D3 code for this view (`milestone3/{name}.js`):\n\n```javascript\n{source}\n```")
 
 
 def basemap():
