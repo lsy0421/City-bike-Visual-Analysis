@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q1 Hourly Departures</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="index.html">Citi Bike: Weekday vs Weekend in Manhattan</a>
+  <nav class="q"><a href="index.html">Overview</a><a href="q1.html" aria-current="page">Q1 Hourly departures</a><a href="q2.html">Q2 Rider groups</a><a href="q3.html">Q3 Net flow</a><a href="q4.html">Q4 Hotspots</a></nav>
+</header>
+<main>
+  <p class="eyebrow">Question 1</p>
+  <h1>Hourly departure patterns</h1>
+
+  <h2>Question of interest</h2>
+  <p class="question">How do average hourly departures differ between ordinary weekdays and weekends?</p>
+  <p class="note">Trips that start and end in Manhattan, September 2026 (<code>manhattan-data</code>). Each hour's trip count is divided by the number of days of that type (21 ordinary weekdays, Labor Day excluded; 8 weekend days), so the two lines are directly comparable even though there are many more weekdays.</p>
+
+  <h2>D3 visualization</h2>
+  <p class="note">Hover the chart to read both daily averages for an hour. Click a legend entry to hide or show a line.</p>
+  <div id="q1-chart"></div>
+
+  <h3>Code (<code>js/q1.js</code>, uses helpers in <code>js/common.js</code>)</h3>
+  <pre class="code" id="q1-code"></pre>
+  <details><summary>Show shared helpers (js/common.js)</summary><pre class="code" id="common-code"></pre></details>
+
+  <h2>What the visualization shows</h2>
+  <p>Weekdays have two sharp peaks. Departures climb from fewer than 900 trips per day at 05:00 to about <b>8,545 at 08:00</b>, drop to roughly 4,100 at 10:00–11:00, and then rise to the day's highest point of about <b>11,409 at 17:00</b> (10,012 at 18:00). The evening peak is higher than the morning one, probably because after-work trips also include errands and social trips, not just the ride home.</p>
+  <p>Weekends have no commuting peaks. Riding builds slowly through the morning (about 1,500 trips at 08:00, less than a fifth of the weekday level) and then stays on a broad plateau of about <b>4,800–5,440 trips per hour from 12:00 to 18:00</b>, highest at 15:00. Between 11:00 and 14:00 the two lines almost meet (weekend ÷ weekday ≈ 0.95–1.01). Late at night (00:00–03:00) weekends are 2–4 times busier than weekdays.</p>
+  <p>Overall, a weekday averages about 105,000 Manhattan-internal trips and a weekend day about 68,000. Riding on weekdays is concentrated into commute hours, while weekend riding is spread across the afternoon, which fits the hypothesis.</p>
+  <p class="note"><b>Reading the view.</b> The chart compares how much people ride and when. A peak at 08:00 is consistent with commuting, but it is not direct evidence of trip purpose.</p>
+</main>
+<footer class="site">Data: Citi Bike System Data, September 2026 · Borough boundary: NYC Open Data · Team 17 (Xi Qiao, Shiyu Liu)</footer>
+<script src="js/common.js"></script>
+<script src="js/q1.js"></script>
+<script>CB.showCode("#q1-code", "js/q1.js"); CB.showCode("#common-code", "js/common.js");</script>
+</body>
+</html>

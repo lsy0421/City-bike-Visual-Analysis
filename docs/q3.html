@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q3 Station Net Flow</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="index.html">Citi Bike: Weekday vs Weekend in Manhattan</a>
+  <nav class="q"><a href="index.html">Overview</a><a href="q1.html">Q1 Hourly departures</a><a href="q2.html">Q2 Rider groups</a><a href="q3.html" aria-current="page">Q3 Net flow</a><a href="q4.html">Q4 Hotspots</a></nav>
+</header>
+<main>
+  <p class="eyebrow">Question 3</p>
+  <h1>Station net inflow and outflow</h1>
+
+  <h2>Question of interest</h2>
+  <p class="question">Which stations have net inflow or outflow, and how does the pattern differ between ordinary weekdays and weekends?</p>
+  <p class="note">For each station: daily net inflow = average arrivals per day − average departures per day. Departures are counted by start time and arrivals by end time. Station IDs that differ only by a trailing zero (same name, within 2 m) are combined, as in the notebook. Both maps use the same extent and the same symbol-area scale.</p>
+
+  <h2>D3 visualization</h2>
+  <p class="note">Hover a symbol for its value. Click a station on either map to highlight it on both maps and compare its weekday and weekend figures. Click empty space to clear the selection.</p>
+  <div id="q3-chart"></div>
+
+  <h3>Code (<code>js/q3.js</code>)</h3>
+  <pre class="code" id="q3-code"></pre>
+  <details><summary>Show shared helpers (js/common.js)</summary><pre class="code" id="common-code"></pre></details>
+
+  <h2>What the visualization shows</h2>
+  <p>Most stations are close to balanced (the median imbalance is about 2 bikes per day), but a few dozen stations gain or lose more than 10 bikes per day: 38 on weekdays and 46 on weekends.</p>
+  <p><b>By area, the two maps differ clearly.</b> On weekdays the orange triangles are concentrated in <b>Midtown (roughly 14th–59th St)</b>, which loses about <b>295 bikes per day</b> in total, while Downtown below 14th St gains about 200 and Harlem / Upper Manhattan above 96th St gains about 60 (58% of its stations have net inflow). On weekends Midtown turns slightly positive (+86), and the area <b>north of 59th St becomes a net source</b>: the Upper East / West Side loses about 35 bikes per day and Harlem and the north about 77, with only 37% of stations north of 96th St showing net inflow. Downtown remains the main sink (+181). Weekday riding drains Midtown, while weekend riding moves bikes from uptown toward downtown.</p>
+  <p><b>Individual stations on weekdays.</b> The largest net-outflow stations, where more bikes leave than arrive, are almost all in <b>Midtown East and Murray Hill</b>: E 39 St &amp; Lexington Ave (−28.6 per day), E 33 St &amp; Park Ave (−23.0), E 47 St &amp; 2 Ave (−21.4), E 35 St &amp; Madison Ave (−17.1) and E 51 St &amp; 2 Ave (−15.8). The largest net-inflow stations are in the <b>Lower East Side and East Village</b>: Norfolk St &amp; Broome St (+28.1), Kenmare St &amp; Elizabeth St (+23.4), Stanton St &amp; Chrystie St (+22.5) and St Marks Pl &amp; 2 Ave (+15.1). On weekdays, many bikes leave the east-side Midtown office area and end up downtown.</p>
+  <p><b>Individual stations on weekends.</b> Outflow moves into the <b>East Village</b> (E 2 St &amp; Ave B, Cooper Square, St Marks Pl &amp; 1 Ave, E 1 St &amp; 1 Ave at −16 to −20), next to stations that had net inflow on weekdays. Inflow appears at <b>Hudson Yards / the far West Side</b> (W 33 St &amp; 10 Ave, +25.1) and in <b>Tribeca and Lower Manhattan</b> (Warren St &amp; W Broadway, Centre St &amp; Chambers St, about +15). 88 stations change direction between weekdays and weekends with an imbalance of more than 5 bikes per day on at least one day type. For example, FDR Drive &amp; E 35 St goes from +4.7 on weekdays to −23.2 on weekends, and 8 Ave &amp; W 31 St from +12.2 to −21.0. Rebalancing that is planned around the weekday pattern would send bikes to the wrong places on weekends.</p>
+  <p class="note"><b>Reading the view.</b> This is recorded trip flow, not dock inventory: Citi Bike's own rebalancing trucks and bikes, and valet service, are not in the trip data. A station that shows a large net inflow every day (for example Norfolk St &amp; Broome St on both day types) must be emptied by operations. The data includes only trips that started in September, so arrivals from trips that started in August are missing.</p>
+</main>
+<footer class="site">Data: Citi Bike System Data, September 2026 · Borough boundary: NYC Open Data · Team 17 (Xi Qiao, Shiyu Liu)</footer>
+<script src="js/common.js"></script>
+<script src="js/q3.js"></script>
+<script>CB.showCode("#q3-code", "js/q3.js"); CB.showCode("#common-code", "js/common.js");</script>
+</body>
+</html>

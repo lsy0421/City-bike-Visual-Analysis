@@ -5,9 +5,17 @@ A Visual Analysis of Weekday–Weekend Hotspots and Flows in NYC Bike Share
 
 Use the [September 2026 Manhattan data and processing instructions](manhattan-data/README.md) for Q1–Q4. Every included trip starts and ends within the Manhattan borough boundary. The earlier NYC-wide tables remain available in [processed/](processed/).
 
+## Milestone 3 notebook
+
+The [Q1–Q4 notebook](milestone3/team17-q1-q4.ipynb) states each question, shows its interactive D3 view and the D3 code, and describes what the view shows. See [how to run the notebook](milestone3/README.md).
+
+## Web version
+
+[docs/](docs/index.html) presents the same four views as a static D3 site (one page per question, with code and findings). It uses the same payloads as the notebook, exported by `docs/build_data.py`. To view it locally, run `python -m http.server 8000 --directory docs` and open http://localhost:8000. To publish it, enable GitHub Pages from the `/docs` folder.
+
 ## Group Details
 
-- **Team name:** 13528
+- **Team name:** team17
 - **Group members:**
   - Xi Qiao (`xq816`)
   - Shiyu Liu (`sl13528`)

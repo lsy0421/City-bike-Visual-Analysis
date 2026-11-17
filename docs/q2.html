@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q2 Rider Groups</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="index.html">Citi Bike: Weekday vs Weekend in Manhattan</a>
+  <nav class="q"><a href="index.html">Overview</a><a href="q1.html">Q1 Hourly departures</a><a href="q2.html" aria-current="page">Q2 Rider groups</a><a href="q3.html">Q3 Net flow</a><a href="q4.html">Q4 Hotspots</a></nav>
+</header>
+<main>
+  <p class="eyebrow">Question 2</p>
+  <h1>Rider-group departure timing</h1>
+
+  <h2>Question of interest</h2>
+  <p class="question">How do member and casual departure-time distributions differ, and how does each change between ordinary weekdays and weekends?</p>
+  <p class="note">Each curve shows the share of a group's departures that start in each hour, so every curve sums to 100%. This lets the two groups be compared even though members make about six times as many weekday trips. Both panels use the same y-axis.</p>
+
+  <h2>D3 visualization</h2>
+  <p class="note">Hover either panel to see the hourly share and the trip count behind it.</p>
+  <div id="q2-chart"></div>
+
+  <h3>Code (<code>js/q2.js</code>)</h3>
+  <pre class="code" id="q2-code"></pre>
+  <details><summary>Show shared helpers (js/common.js)</summary><pre class="code" id="common-code"></pre></details>
+
+  <h2>What the visualization shows</h2>
+  <p><b>Members on weekdays</b> have the clearest commuting pattern. <b>20.5%</b> of their weekday departures start between 07:00 and 09:59 (8.8% in the 08:00 hour alone) and another 28% between 16:00 and 18:59, peaking at 11.0% at 17:00.</p>
+  <p><b>Casual riders on weekdays</b> have a much smaller morning peak. Only 11.7% of their trips start between 07:00 and 09:59 and only 4.6% at 08:00, about half the member share. More than half of their trips (52.5%) start between 10:00 and 17:59. They still have an evening peak at 17:00 (10.2%), which suggests that some casual riders also ride after work.</p>
+  <p><b>On weekends both groups move toward the same midday shape.</b> The morning peak disappears for members (2.5% at 08:00), both curves peak at 15:00, and 56–58% of each group's trips start between 10:00 and 17:59. On weekends, member riding looks much like casual riding.</p>
+  <p>The groups also change in size. Casual riders make <b>16% of Manhattan-internal trips on weekdays but 27% on weekends</b> (352,587 of 2,212,533 weekday trips vs. 147,056 of 543,922 weekend trips), which matches the expectation of more leisure and visitor riding on weekends.</p>
+  <p class="note"><b>Reading the view.</b> Because each curve is normalized within its group, the chart compares when each group rides, not how many trips it makes. The trip counts are shown in the tooltip and in the panel headings.</p>
+</main>
+<footer class="site">Data: Citi Bike System Data, September 2026 · Team 17 (Xi Qiao, Shiyu Liu)</footer>
+<script src="js/common.js"></script>
+<script src="js/q2.js"></script>
+<script>CB.showCode("#q2-code", "js/q2.js"); CB.showCode("#common-code", "js/common.js");</script>
+</body>
+</html>

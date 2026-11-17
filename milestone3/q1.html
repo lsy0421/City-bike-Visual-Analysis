@@ -1,0 +1,11 @@
+<div class="legend" aria-label="Show or hide a day type">
+  <button type="button" data-day="weekday" aria-pressed="true"><span class="sample-line"></span><span>Ordinary weekday</span></button>
+  <button type="button" data-day="weekend" aria-pressed="true"><span class="sample-line weekend"></span><span>Weekend</span></button>
+</div>
+<div id="hourly-chart"></div>
+<div class="controls">
+  <label for="hour">Compare hour</label>
+  <input id="hour" type="range" min="0" max="23" step="1" value="17">
+  <output for="hour" id="hour-label">17:00</output>
+</div>
+<div id="hour-details" class="details"></div>
