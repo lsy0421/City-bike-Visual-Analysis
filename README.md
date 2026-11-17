@@ -11,7 +11,7 @@ The [Q1–Q4 notebook](milestone3/team17-q1-q4.ipynb) states each question, show
 
 ## Web version
 
-[docs/](docs/index.html) presents the same four views as a static D3 site (one page per question, with code and findings). It uses the same payloads as the notebook, exported by `docs/build_data.py`. To view it locally, run `python -m http.server 8000 --directory docs` and open http://localhost:8000. To publish it, enable GitHub Pages from the `/docs` folder.
+[Click here](https://lsy0421.github.io/City-bike-Visual-Analysis/) to see the web version.
 
 ## Group Details
 
